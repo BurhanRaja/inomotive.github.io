@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %} Innomotive | Aboutme {% endblock title %}
+
+
+
+
+{% block body %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+<body>
+<section>
+    
+
+    <div class="back"></div>
+    <div class="port">
+      <p>Know more about me!!</p>
+      <hr>
+      <p>Scroll down &darr;</p>
+    </div>
+    
+
+    <!--Card-title Lower section  -->
+
+    <div class="box-container">
+      <div class="box-1">
+      {% load static %}
+        <img src="{% static 'images/Burhan4.jpeg' %}" class="card-img-1" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">About Me</h5>
+          <p class="card-text"> </p>
+        </div>
+      </div>
+
+      <div class="box-2">
+      {% load static %}
+        <img src="{% static 'images/Journey - Copy.jpg' %}" class="card-img-2" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">My Journey so far</h5>
+          <p class="card-text"></p>
+        </div>
+      </div>
+
+      <div class="box-3">
+      {% load static %}
+        <img src="{% static 'images/My image.jpeg' %}" class="card-img-3" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">About Inomotive</h5>
+          <p class="card-text"></p>
+        </div>
+      </div>
+    </div>
+   <div class="contact2">
+
+            <div class="copyright">
+                &copy; Copyright | All the rights are reserved
+            </div>
+        </div>
+
+  </section>
+</body>
+{% endblock body %}
+
+</html>

@@ -1,0 +1,183 @@
+
+
+  .copyright {
+    text-align: center;
+    font-size: 16px;
+  }
+
+    .contact2{
+      color: white;
+    background-color: black;
+    text-align: center;
+    font-size: 25px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+  .search{
+    display: flex;
+    justify-content: center;
+    top: 440px;
+    position: relative;
+    
+   }
+
+  #search{
+    width: 45%;
+    height: 50px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 19px;
+
+   }
+
+   .olo{
+    padding: 7px 12px;
+    background-color: #2d2f2c;
+    border-radius: 5px;
+    font-size: 15px;
+    border: 2px solid #073ce7;
+    color: #073ce7;
+   }
+   .olo:hover{
+       background-color: rgb(184, 174, 174);
+       cursor: pointer;
+   }
+   .color{
+    background-color: black;
+    width: 97%;
+    height: 548px;
+    position: absolute;
+    margin: 30px;
+       
+   }
+   .aiimg{
+    display: flex;
+    position: absolute;
+ 
+    height: 550px;
+    width: 100%;
+
+   }
+  
+
+   
+   .text{
+    position: absolute;
+    display: block;
+    left: 28%;
+    color: white;
+    top: 8px;
+   
+   }
+   .text p:nth-child(1){
+      display: flex;
+    font-size: 75px;
+    font-family: 'Baloo Da 2', cursive;
+    text-align: center;
+
+    color:black;
+    
+    margin-left: 62px;
+
+   }
+   .text p:nth-child(2){
+     display: flex;
+     font-size:75px;
+    color:black;
+
+     text-align: center;
+     margin: 2px 2px 14px 2px;
+     line-height: 100px;
+     
+   }
+
+   .text p:nth-child(3){
+       font-size:30px;
+       color:black;
+       margin-bottom: 0px;
+   }
+
+.text ul li{
+     font-size:25px;
+       color:black;
+      
+
+}
+
+   .card{
+     display: flex;
+    height: auto;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 1100px;
+    margin:20px 0px 29px 226px;
+    
+   }
+.all{
+ display: block;
+ position: absolute;
+ top: 230px;
+
+}
+ 
+
+ /* Contact Section */ 
+
+    .copyright {
+    text-align: center;
+    font-size: 16px;
+  }
+
+    .contact2{
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-size: 25px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.col-1 img{
+  height: 147px;
+    width: 151px;
+    margin: 8px 18px 6px 4px;
+}
+.content{
+  display:none;
+}
+
+.read{
+      background-color: #1b70ff;
+    padding: 4px 5px;
+    border-radius: 5px;
+    color: white;
+}
+.read:hover{
+    background-color:#2c508e;
+}
+.col-2{
+  padding:9px 29px;
+}
+.author{
+  color: #0077f3;
+    font-style: bold;
+    font-weight: bolder;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+.card-title{
+font-family: 'Inter', sans-serif;
+margin-bottom: 0px;
+    
+    color: #003373;
+}
+.card-title a:hover{
+  color:blue;
+  cursor:pointer;
+  color:#0071ff;
+  text-decoration: underline;
+}

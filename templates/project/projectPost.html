@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %} Innomotive | Projecthome | ProjectPost {% endblock title %} 
+
+{% block body %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/projectpost.css' %}">
+
+<body>
+<div class="post">
+<p class="title">{{project.title}}</p>
+<p>{{project.timeStamp}}</p>
+
+      <div class="col-2">
+      <p class="cont">
+{{project.content|safe}} 
+</p>
+</div>
+</div>
+
+
+<br>
+
+      <div class="contact2">
+
+        <div class="copyright">
+            &copy; Copyright | All the rights are reserved
+        </div>
+    </div>
+</body>
+{% endblock body %}

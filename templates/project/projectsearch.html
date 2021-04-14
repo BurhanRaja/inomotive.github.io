@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title%} Innomotive | Search Results  {% endblock title %}
+
+{% block body %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/projectsearch.css' %}">
+<body>
+
+     
+
+      <div class="text">
+        <p>Search Results:</p>
+{% if allprojects|length < 1 %}
+        <p>No Search results found</p>
+
+       <p> Your search - <b>{{queries}}</b> - did not match any document <br>
+        Suggestions:</p>
+        <ul>
+        <li>Try different keywords</li>
+        <li>Try more general keywords</li>
+        <li>Try fewer keywords</li>
+        <li></li>
+        </ul>
+       
+        
+{% endif %}
+
+      </div>
+
+
+<div class="all">
+{% for project in allprojects %}
+      <div class="card">
+          <div class="col-2">
+            <div class="card-body">
+              <h2 class="card-title"> <a href="/projects/{{project.slug}}">{{project.title}}</a></h2>
+              <p class="card-text">{{project.content|safe|truncatechars:500}}</span></p>
+              <a href="/projects/{{project.slug}}"  class="read">Read More</a>
+              <p class="card-text"><small class="text-muted">{{project.timeStamp}}</small></p>
+              
+            </div>
+          </div>
+           </div>
+      
+    {% endfor %}
+
+ </div>
+      <div class="contact2">
+
+        <div class="copyright">
+            &copy; Copyright | All the rights are reserved
+        </div>
+    </div>
+    
+</body>
+{% endblock body %}
+</html>

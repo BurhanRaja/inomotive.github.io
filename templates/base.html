@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title%} {% endblock title %}</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@300&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<style>
+
+{% comment %}   Body Section  {% endcomment %}
+ 
+
+  body {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  section {
+    width: 100%;
+    height: 95vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+
+
+
+{% comment %} 
+  Navigation Bar  {% endcomment %}
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: black;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    padding: 0px 50px;
+  }
+
+  nav ul {
+    display: flex;
+    padding-right: 9%;
+    margin-right:40px;
+    margin-left:100px;
+  }
+
+  nav ul li a {
+    margin: 18px;
+    font-family: myriad pro regular;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  nav ul li a:hover {
+    color: #888888;
+  }
+
+  .logo {
+    font-family: RoadTest;
+    color: white;
+    font-size: 22px;
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 4px;
+  }
+
+  .social-icons a {
+    width: 36px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6e3e3;
+    margin: 20px 10px;
+    border-radius: 50%;
+  }
+
+  .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .one::before {
+    content: "";
+     {% load static %}
+    background-image: url("{% static 'images/Linkedin.png' %}");
+    height: 33px;
+    width: 33px;
+    background-repeat: no-repeat;
+  }
+
+  .two::before {
+    content: "";
+   {% load static %}
+    background-image: url("{% static 'images/Instagram.png' %}");
+    height: 33px;
+    width: 33px;
+    background-repeat: no-repeat;
+  }
+
+  .three::before {
+    content: "";
+    {% load static %}
+    background-image: url("{% static 'images/Kaggle.png' %}");
+    height: 33px;
+    width: 33px;
+    background-repeat: no-repeat;
+  }
+
+  .four::before {
+    content: "";
+    {% load static %}
+    background-image: url("{% static 'images/Github.png' %}");
+    height: 33px;
+    width: 33px;
+    background-repeat: no-repeat;
+  }
+
+  .social-icons a:hover {
+
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    transition: all ease 0.2s;
+    background-color: gray;
+  }
+
+
+ 
+
+
+
+
+{% comment %}   The alert message box {% endcomment %} 
+  .alert {
+   padding: 5px;
+  }
+  .alert-error {
+      background-color:lightred;
+    padding: 25px;
+    margin: 0px;
+  }
+  .alert-success{
+     padding: 25px;
+    margin: 0px;
+     background-color:lightgreen;
+  }
+
+.error{
+  font-size: 23px;
+    color: #b50000;
+}
+.success{
+  font-size: 23px;
+    color: #1aad25;
+}
+
+  .closebtn {
+    margin-left: 15px;
+    color: #006400;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .closebtn:hover {
+    color: black;
+  }
+
+
+
+{% comment %} Sign Up {% endcomment %}
+.button{
+  background-color: rgb(80, 80, 212);
+    color: white;
+    padding: 12px 13px 10px 14px;
+    border: 0px;
+        margin: 2px 2px 2px 6px;
+    border-radius: 5px;
+    font-family: calibri;
+}
+
+.button:hover{
+  background-color: rgb(6, 6, 105);
+ cursor: pointer;
+}
+
+.modal{
+  display: none;
+ 
+  position: fixed;
+  z-index: 1;
+  left: 0px;top: 0px;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content{
+    background-color: white;
+    margin: 7% auto;
+    height: 555px;
+    border-radius: 5px;
+    padding: 35px;
+    width: 32%;
+    box-shadow: 0 5px 8px 0 rgb(0 0 0);
+ 
+}
+.modal-content p{
+    font-family: calibri;
+    margin-top: 0px;
+    font-size: 24px;
+}
+
+.closeBtn{
+color: #ccc;
+float: right;
+font-size: 30px;
+}
+
+.closeBtn:hover, .closeBtn:focus{
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+.closeBtns{
+color: #ccc;
+float: right;
+font-size: 30px;
+}
+
+.closeBtns:hover, .closeBtns:focus{
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+{% comment %} form{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ } {% endcomment %}
+ 
+ .lab{
+     margin: 2px 2px;
+     padding: 2px 2px;
+ }
+
+ label{
+     margin: 2px 2px 2px 2px ;
+     font-size: 20px;
+ }
+ input{
+     display: block;
+     width: 96%;
+     padding: 7px 2px;
+     margin: 5px 4px;
+ }
+
+ .btn{
+    display: block;
+    width: 167px;
+    color: white;
+    font-size: 15px;
+    border-radius: 4px;
+    padding: 9px 2px;
+    margin: 17px 4px;
+    float: right;
+    background-color: #0c177ded;
+ }
+
+.btn:hover{
+  background-color:#129a12;
+  cursor:pointer;
+}
+ .btn-1{
+    display: block;
+    width: 167px;
+    color: white;
+    font-size: 15px;
+    border-radius: 4px;
+    padding: 9px 2px;
+    margin: 11px 4px;
+    float: left;
+    background-color: darkgray;
+ }
+
+.btn-1:hover{
+  background-color:lightgray;
+  cursor:pointer;
+}
+
+
+
+
+
+{% comment %} Users Dropdown {% endcomment %}
+.dropbtn {
+  background-color: #2a499a;
+  color: white;
+  padding: 10px;
+  border-radius:4px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom:0px;
+}
+
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-bottom:20px;
+  margin-right: -26px;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #ddd}
+
+.show {display:block;}
+
+.all-btn{
+  display:flex;
+}
+
+
+
+{% comment %} Size:- 1300 to 1450 {% endcomment %}
+  @media only screen and (min-width: 1300px) and (max-width: 1450px) {
+#modalBtn, #modalBtns{
+    margin: 7px 2px 5px 2px;
+    padding: 2px 5px;
+    height: 42px;
+    width: 46px;
+    font-size: 10px;
+}
+.all-btn{
+  margin:2px 2px;
+}
+.social-icons{
+  margin-right:2px;
+}
+nav ul{
+    padding-right: 7%;
+    margin-right: 0px;
+}
+   .openbtn{
+  display:none;
+}
+.closebtns{
+  display:none;
+}
+
+.dropbtn{
+    padding: 8px 8px;
+    font-size: 16px;
+}
+  }
+  
+
+
+  {% comment %} 1275 to 1756 {% endcomment %}
+ @media only screen and (min-width: 1275px) and (max-width: 1756px){
+   .openbtn{
+  display:none;
+}
+.closebtns{
+  display:none;
+}
+ }
+
+
+
+
+{% comment %} 1275 to 1300 {% endcomment %}
+  @media only screen and (min-width: 1275px) and (max-width: 1300px) {
+    #modalBtn, #modalBtns{
+    margin: 7px 2px 5px 2px;
+    padding: 2px 5px;
+    height: 42px;
+    width: 46px;
+    font-size: 10px;
+}
+   .openbtn{
+  display:none;
+}
+.closebtns{
+  display:none;
+}
+.all-btn{
+  margin:2px 2px;
+}
+.social-icons{
+  margin-right:2px;
+}
+nav ul{
+    padding-right: 7%;
+    margin-right: 0px;
+    margin-left:70px;
+}
+.dropbtn{
+padding: 8px 8px;
+    font-size: 12px;
+}
+  }
+
+
+
+
+  
+
+{% comment %}   /* Size :- 1170 to 1275 */ {% endcomment %}
+
+  @media only screen and (min-width: 1170px) and (max-width: 1275px) {
+    .logo {
+      font-size: 20px;
+    }
+   .openbtn{
+  display:none;
+}
+.closebtns{
+  display:none;
+}
+    #navbar {
+      display: none;
+    }
+nav ul{
+    padding-right: 6%;
+    margin-right: 0px;
+    margin-left:60px;
+}
+    #modalBtn, #modalBtns{
+    margin: 7px 2px 5px 2px;
+    padding: 2px 5px;
+    height: 39px;
+    width: 46px;
+    font-size: 10px;
+}
+.all-btn{
+  margin:2px 2px;
+}
+.social-icons{
+  margin-right:2px;
+}
+    #nav ul li a {
+      font-size: 13.5px;
+    }
+
+    .social-icons a {
+      height: 33px;
+      width: 33px;
+    }
+    .dropbtn{
+padding: 8px 8px;
+    font-size: 12px;
+}
+  }
+
+
+
+
+
+
+{% comment %}   /* Size :- 1115 to 1170 */ {% endcomment %}
+
+
+  @media only screen and (min-width: 1116px) and (max-width: 1170px) {
+    .logo {
+      font-size: 19px;
+    }
+nav ul{
+    padding-right: 6%;
+    margin-right: 0px;
+    margin-left:50px;
+}
+   .openbtn{
+  display:none;
+}
+.closebtns{
+  display:none;
+}
+    #modalBtn, #modalBtns{
+    margin: 7px 2px 5px 2px;
+    padding: 0px 5px;
+        height: 36px;
+    width: 46px;
+    font-size: 10px;
+}
+#main{
+  display:none;
+}
+.closebtns{
+  display:none;
+}
+.all-btn{
+  margin:2px 2px;
+}
+.social-icons{
+  margin-right:2px;
+}
+    #nav ul li a {
+      font-size: 12px;
+    }
+
+    .social-icons a {
+      height: 27px;
+      width: 27px;
+    }
+
+    .one::before {
+      {% load static %}
+      background-image: url("{% static 'images/linked24.png' %}");
+      height: 24px;
+      width: 24px;
+
+    }
+
+    .two::before {
+    {% load static %}
+      background-image: url("{% static 'images/insta24.png' %}");
+      height: 24px;
+      width: 24px;
+    }
+
+    .three::before {
+  {% load static %}
+      background-image: url("{% static 'images/kag24.png' %}");
+      height: 24px;
+      width: 24px;
+    }
+
+    .four::before {
+  {% load static %}
+      background-image: url("{% static 'images/git24.png' %}");
+      height: 24px;
+      width: 24px;
+    }
+        .dropbtn{
+padding: 8px 8px;
+    font-size: 12px;
+        width:auto;
+}
+  }
+
+
+
+
+{% comment %}   /* Size :- 1024 to 1115 */ {% endcomment %}
+
+
+  @media only screen and (min-width: 1024px) and (max-width: 1115px) {
+    .logo {
+      font-size: 19px;
+    }
+
+    #nav ul li a {
+      font-size: 11px;
+    }
+nav ul{
+    padding-right: 5.5%;
+    margin-right: 0px;
+    margin-left:50px;
+}
+#main{
+  display:none;
+}
+.closebtns{
+  display:none;
+}
+    #modalBtn, #modalBtns{
+    margin: 7px 2px 5px 2px;
+    padding: 5px 3px;
+    height: 32px;
+    width: 40px;
+    font-size: 10px;
+    }
+.all-btn{
+  margin:2px 2px;
+}
+.social-icons{
+  margin-right:2px;
+}
+    .social-icons a {
+      height: 23px;
+      width: 23px;
+    }
+
+    .one::before {
+  {% load static %}
+     background-image:url("{% static 'images/linked16.png' %}");
+      height: 16px;
+      width: 15px;
+
+    }
+
+    .two::before {
+  {% load static %}
+      background-image: url("{% static 'images/insta16.png' %}");
+      height: 16px;
+      width: 15px;
+    }
+
+    .three::before {
+  {% load static %}
+      background-image: url("{% static 'images/kag16.png' %}");
+      height: 16px;
+      width: 15px;
+    }
+
+    .four::before {
+    {% load static %}
+      background-image: url("{% static 'images/git16.png' %}");
+      height: 16px;
+      width: 15px;
+    }
+            .dropbtn{
+padding: 8px 3px;
+      width:auto;
+    font-size: 12px;
+}
+  }
+
+
+
+
+
+
+{% comment %}   /* Size:- 986 to 1024 */ {% endcomment %}
+  @media only screen and (min-width: 986px) and (max-width: 1024px) {
+    .logo {
+      font-size: 18px;
+    }
+
+    #nav ul li a {
+      font-size: 10px;
+    }
+
+    .social-icons a {
+      height: 20px;
+      width: 20px;
+      margin-left:0px;
+    }
+    #main{
+  display:none;
+}
+.closebtns{
+  display:none;
+}
+nav ul{
+    padding-right: 5.5%;
+    margin-right: 0px;
+    margin-left:50px;
+}
+    #modalBtn, #modalBtns{
+    margin: 7px 2px 5px 2px;
+    padding: 5px 3px;
+    height: 32px;
+    width: 40px;
+    font-size: 10px;
+    }
+.all-btn{
+  margin:2px 2px;
+}
+.social-icons{
+  margin-right:2px;
+}
+    .one::before {
+  {% load static %}
+      background-image: url("{% static 'images/linked16.png' %}");
+      height: 16px;
+      width: 15px;
+
+    }
+
+    .two::before {
+  {% load static %}
+      background-image: url("{% static 'images/insta16.png' %}");
+      height: 16px;
+      width: 15px;
+    }
+
+    .three::before {
+       
+    {% load static %}
+      background-image: url("{% static 'images/kag16.png' %}");
+      height: 16px;
+      width: 15px;
+    }
+
+    .four::before {
+ {% load static %}
+      background-image: url("{% static 'images/git16.png' %}");
+      height: 16px;
+      width: 15px;
+    }
+                .dropbtn{
+padding: 8px 3px;
+       width:auto;
+    font-size: 12px;
+}
+  }
+
+
+
+
+
+
+
+
+
+
+{% comment %}   /* Size :- 870 to 986 */
+ {% endcomment %}
+  @media only screen and (min-width: 870px) and (max-width: 986px) {
+    .logo {
+      font-size: 17px;
+    }
+
+    #nav ul li a {
+      font-size: 9px;
+     margin: 3px 15px 2px 6px;
+    }
+
+    .social-icons a {
+      height: 20px;
+      width: 20px;
+      margin-left:0px;
+    }
+nav ul{
+    padding-right: 5.5%;
+    margin-right: 0px;
+    margin-left:50px;
+}
+#main{
+  display:none;
+}
+.closebtns{
+  display:none;
+}
+    #modalBtn, #modalBtns{
+    margin: 7px 2px 5px 2px;
+    padding: 5px 3px;
+    height: 32px;
+    width: 40px;
+    font-size: 10px;
+    }
+.all-btn{
+  margin:2px 2px;
+}
+.social-icons{
+    margin-right: 2px;
+    margin-left: 38px;
+}
+
+
+
+    .one::before {
+  {% load static %}
+      background-image: url("{% static 'images/linked16.png' %}");
+      height: 16px;
+      width: 15px;
+
+    }
+
+    .two::before {
+       
+  {% load static %}
+      background-image: url("{% static 'images/insta16.png' %}");
+      height: 16px;
+      width: 15px;
+    }
+
+    .three::before {
+   {% load static %}
+      background-image: url("{% static 'images/kag16.png' %}");
+      height: 16px;
+      width: 15px;
+    }
+
+    .four::before {
+{% load static %}
+      background-image: url("{% static 'images/git16.png' %}");
+      height: 16px;
+      width: 15px;
+    }
+  
+  .dropbtn{
+padding: 8px 3px;
+    width:auto;
+    font-size: 12px;
+}
+  }
+
+
+
+
+
+{% comment %}   /* Size :- 870 to 768 */ {% endcomment %}
+ @media only screen and (min-width: 767px) and (max-width: 870px) {
+    .logo {
+      font-size: 17px;
+    }
+
+    #nav ul li a {
+      font-size: 9px;
+      margin:2px 10px;
+    }
+#main{
+  display:none;
+}
+.closebtns{
+  display:none;
+}
+    .social-icons a {
+      height: 20px;
+      width: 20px;
+      margin-left:0px;
+    }
+
+    .model {
+      height: 200px;
+      left: 85%;
+    }
+nav ul{
+    padding-right: 3.5%;
+    margin-right: 0px;
+    margin-left:10px;
+}
+    #modalBtn, #modalBtns{
+    margin: 7px 2px 5px 2px;
+    padding: 6px 0px;
+    height: 27px;
+    width: 35px;
+    font-size: 8px;
+    }
+.all-btn{
+  margin:2px 2px;
+}
+.social-icons{
+    margin-right: 2px;
+    margin-left: 5px;
+}
+
+    .one::before {
+   {% load static %}
+      background-image: url("{% static 'images/linked16.png' %}");
+      height: 16px;
+      width: 15px;
+    }
+
+    .two::before {
+{% load static %}
+      background-image: url("{% static 'images/insta16.png' %}");
+      height: 16px;
+      width: 15px;
+    }
+
+    .three::before {
+{% load static %}
+      background-image: url("{% static 'images/kag16.png' %}");
+      height: 16px;
+      width: 15px;
+    }
+
+    .four::before {
+{% load static %}
+      background-image: url("{% static 'images/git16.png' %}");
+      height: 16px;
+      width: 15px;
+    }
+  .dropbtn{
+padding: 8px 3px;
+      width:auto;
+    font-size: 12px;
+}
+.dropdown-content{
+  padding: 8px 3px;
+   font-size: 12px;
+    width:auto;
+}
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}   /* Size :-   425 to 768 */ {% endcomment %}
+
+
+  @media only screen and (min-width: 425px) and (max-width: 767px) {
+
+.sidebar {
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0;
+  right: 0;
+  background-color: #111; 
+  overflow-x: hidden; 
+  padding-top: 60px; 
+  transition: 0.5s; 
+}
+
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(80, 80, 212);
+    color: white;
+    padding: 4px 10px;
+    right: 9px;
+    border: none;
+    border-radius:4px;
+    top: 2px;
+    position: absolute;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+
+#main {
+  transition: margin-left .5s; 
+  padding: 20px;
+  
+}
+    nav {
+      display: block;
+      background-color: black;
+          height: 195px;
+    }
+nav ul{
+      padding: 0px;
+      display: block;
+      text-align: center;
+      margin: 2px;
+}
+        #modalBtn, #modalBtns{
+    margin: 7px 2px 5px 2px;
+    padding: 6px 0px;
+    height: 27px;
+    width: 100px;
+    font-size: 8px;
+    }
+.all-btn{
+  margin:2px 2px;
+  margin-left:25%;
+}
+    .logo {
+      font-size: 17px;
+      justify-content: center;
+      display: flex;
+    }
+
+
+    #nav ul li a {
+      font-size: 9px;
+      margin:2px 10px;
+    }
+
+    .social-icons a {
+      height: 20px;
+      width: 20px;
+    }
+
+    .social-icons {
+      margin-left: 18px;
+    }
+
+    .one::before {
+ {% load static %}
+      background-image: url("{% static 'images/linked16.png' %}");
+      height: 16px;
+      width: 15px;
+
+    }
+
+    .two::before {
+{% load static %}
+      background-image: url("{% static 'images/insta16.png' %}");
+      height: 16px;
+      width: 15px;
+    }
+
+    .three::before {
+ {% load static %}
+      background-image: url("{% static 'images/kag16.png' %}");
+      height: 16px;
+      width: 15px;
+    }
+
+    .four::before {
+{% load static %}
+      background-image: url("{% static 'images/git16.png' %}");
+      height: 16px;
+      width: 15px;
+    }
+
+    .contact2 {
+      position: fixed;
+      bottom: 0px;
+    }
+.dropbtn{
+  margin-top:0px;
+  margin-left:100px;
+  width:auto;
+}
+.dropdown-content{
+    margin-left:100px;
+}
+
+  }
+
+
+
+{% comment %}   /* Size :- 440 to 299 */ {% endcomment %}
+
+
+  @media only screen and (min-width: 299px) and (max-width: 440px) {
+    nav {
+      display: block;
+     display: block;
+    background-color: black;
+    height: 200px;
+    }
+
+.sidebar {
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0;
+  right: 0;
+  background-color: #111; 
+  overflow-x: hidden; 
+  padding-top: 60px; 
+  transition: 0.5s; 
+}
+
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(80, 80, 212);
+    color: white;
+    padding: 4px 10px;
+    right: 9px;
+    border: none;
+    border-radius:4px;
+    top: 2px;
+    position: absolute;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+  
+}
+    .logo {
+      font-size: 17px;
+      justify-content: center;
+      display: flex;
+    }
+
+    #nav ul li a {
+      font-size: 9px;
+    }
+nav ul{
+      padding: 0px;
+      display: block;
+      text-align: center;
+      margin: 2px;
+}
+
+        #modalBtn, #modalBtns{
+    margin: 7px 2px 5px 2px;
+    padding: 6px 0px;
+    height: 27px;
+    width: 100px;
+    font-size: 8px;
+    }
+.all-btn{
+  margin:2px 2px;
+  margin-left:7%;
+  left: 20%;
+    position: absolute;
+}
+
+
+
+    .social-icons a {
+      height: 20px;
+      width: 20px;
+    }
+
+    .social-icons {
+      margin-left: 18px;
+    }
+
+    .one::before {
+{% load static %}
+
+
+      background-image: url("{% static 'images/linked16.png' %}");
+      height: 16px;
+      width: 15px;
+
+    }
+
+    .two::before {
+{% load static %}
+
+      background-image: url("{% static 'images/insta16.png' %}");
+      height: 16px;
+      width: 15px;
+    }
+
+    .three::before {
+ {% load static %}
+
+
+      background-image: url("{% static 'images/kag16.png' %}");
+      height: 16px;
+      width: 15px;
+    }
+
+    .four::before {
+        {% load static %}
+      
+
+      background-image: url("{% static 'images/git16.png' %}");
+      height: 16px;
+      width: 15px;
+    }
+
+    .contact2 {
+      position: fixed;
+      bottom: 0px;
+    }
+
+    .dropbtn{
+  margin-top:0px;
+  margin-left:35px;
+  width:auto;
+}
+.dropdown-content{
+    margin-left:35px;
+}
+
+
+  }
+
+
+
+</style>
+
+<body>
+  <section>
+   
+    <!-- Navigation Bar -->
+    <nav id="nav">
+    
+      <a class="logo" href="">Inomotive</a>
+       {% load static %}
+       <script src=" {% static 'javascript/more.js' %} "></script>
+            <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+      </div>
+      <ul id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtns" onclick="closeNav()">&times;</a>
+        <li><a class="activ" href="/">Home</a></li>
+        <li><a class="about" href="/aboutme">AboutMe</a></li>
+        <li><a class="portfolio" href="/portfolio">MySketchs</a></li>
+        <li><a class="project" href="/projects">Projects</a></li>
+        <li><a class="Blogs" href="/blogs">MyBlogs</a></li>
+        <li><a class="contact" href="/contactme">ContactMe</a></li>
+      </ul>
+
+      <!-- Icons for social media in Navigation Bar -->
+      <div class="social-icons">
+        <a href="http://www.linkedin.com/in/burhanuddin-raja-261b1617b" class="one"></a>
+        <a href="http://www.instagram.com/burhan5150/" class="two"></a>
+        <a href="https://www.kaggle.com/burhanuddinraja" class="three"></a>
+        <a href="https://github.com/BurhanuddinRaja" class="four"></a>
+
+      </div>
+
+
+    <!--Welcome users-->
+{% if user.is_authenticated %}
+<div class="dropdown">
+  <p onclick="myFunction()" class="dropbtn">Welcome {{request.user}}</p>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="/logout">Log Out</a>
+  </div>
+</div>
+{% load static %}
+<script src=" {% static 'javascript/dropdown.js' %} "></script>
+ {% else %}
+ <div class="all-btn">
+<button id="modalBtn" class="button">Sign Up</button>
+ <button id="modalBtns" class="button">Log In</button>
+</div>
+{% endif %}
+
+
+              <!-- Sign-Up -->
+  
+   <div id="simpleModal" class="modal">
+     <div class="modal-content">
+       <span class="closeBtn">&times;</span>
+
+       <p><b>Sign Up</b></p>
+       <form action="/signup" method="post" class="sign">
+       <div class="container">
+
+        <div class="lab">
+          <label class="due" for="name">Username</label>
+          <input type="text" id="username" name="username" placeholder="Lowercase & Alphanumeric only" required>
+        </div>
+
+        <div class="lab">
+          <label class="due" for="name">First Name</label>
+          <input type="text" id="firstname" name="firstname" placeholder="" required>
+        </div>
+
+        <div class="lab">
+          <label class="due" for="name">Last Name</label>
+          <input type="text" id="lastname" name="lastname" placeholder="" required>
+        </div>
+
+        <div class="lab">
+          <label class="due" for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="" required>
+        </div>
+
+        <div class="lab">
+          <label class="due" for="contact">Choose a Password</label>
+          <input type="password" id="password" name="password" placeholder="" minlength="8" required>
+        </div>
+
+        <div class="lab">
+          <label class="due" for="age">Confirm Password</label>
+          <input type="password" id="confpassword" name="confpassword" placeholder="" minlength="8" required>
+        </div>
+
+{% csrf_token %}
+        <div class="lab">
+         <button type="submit" class="btn">Sign Up</button>
+        </div>
+      </div>
+       </form>
+     </div>
+   </div>
+{% load static %}
+<script src= "{% static 'javascript/main.js' %}"></script>
+
+
+
+
+
+
+
+
+         <!--Log-In --> 
+   <div id="simpleModals" class="modal">
+     <div class="modal-content">
+       <span class="closeBtns">&times;</span>
+       <p><b>Log In</b></p>
+
+       <form action="/login" method="post" class="sign">
+       <div class="container">
+
+        <div class="lab">
+          <label class="due" for="name">Username</label>
+          <input type="text" id="loginusername" name="loginusername" placeholder="" required>
+        </div>
+
+        <div class="lab">
+          <label class="due" for="age">Password</label>
+          <input type="password" id="loginpass" name="loginpass" placeholder="" minlength="8" required>
+        </div>
+        {% csrf_token %}
+        <div class="lab">
+         <button class="btn-1" type="submit">Log In</button>
+        </div>
+      </div>
+       </form>
+     </div>
+   </div>
+   {% load static %}
+<script src= "{% static 'javascript/log.js' %}"></script>
+    </nav>
+
+
+ 
+<!--{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}-->
+
+    <!--- Alert message -->
+    {% for message in messages %}
+    <ul class="alert-{{message.tags}}">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+       <li class="{{ message.tags }}"><strong>Message:</strong> {{ message }}</li>
+    </ul>
+   
+    {% endfor %}
+
+
+
+    <script>
+      // Get all elements with class="closebtn"
+      var close = document.getElementsByClassName("closebtn");
+      var i;
+
+      // Loop through all close buttons
+      for (i = 0; i < close.length; i++) {
+        // When someone clicks on a close button
+        close[i].onclick = function () {
+
+          // Get the parent of <span class="closebtn"> (<div class="alert">)
+          var div = this.parentElement;
+
+          // Set the opacity of div to 0 (transparent)
+          div.style.opacity = "0";
+
+          // Hide the div after 600ms (the same amount of milliseconds it takes to fade out)
+          setTimeout(function () { div.style.display = "none"; }, 600);
+        }
+      }
+
+    </script>
+
+
+
+
+    {% block body %}
+
+    {% endblock body %}
+
+  </section>
+
+
+
+
+</body>
+
+</html>

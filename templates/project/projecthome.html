@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title%} Innomotive | Projecthome  {% endblock title %}
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+{% block body %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/projecthome.css' %}">
+<body>
+
+     
+      <div class="aiimg"> </div>
+      <div class="text">
+        <p>Welcome to my Projects</p>
+      </div>
+     
+<form action="{% url 'projectsearch' %}" method="get" class="search">
+  <input type="text" name="queries" id="search" placeholder="Search..">
+  <button type="submit" class="olo">Search</button>
+  </form>
+ 
+<div class="all">
+{% for project in allprojects %}
+      <div class="card">
+      <div class="col-1">
+      </div>
+          <div class="col-2">
+            <div class="card-body" styles={{styles}}>
+            {% comment %} <p class="author">Article by {{post.author}}</p> {% endcomment %}
+              <h1 class="card-title"> <a href="/projects/{{project.slug}}">{{project.title}}</a> </h1>
+              <p class="card-text"><small class="text-muted">{{project.timeStamp}}</small></p>
+              <p class="card-text"><span>{{project.content|safe|truncatechars:500}}</span></p>
+              <a href="/projects/{{project.slug}}"  class="read">Read More</a>
+              
+            </div>
+          </div>
+           
+      </div>
+      {% comment %} </div> {% endcomment %}
+
+      {% endfor %}
+ 
+      <div class="contact2">
+
+        <div class="copyright">
+            &copy; Copyright | All the rights are reserved
+        </div>
+    </div>
+    
+</body>
+{% endblock body %}
+</html>

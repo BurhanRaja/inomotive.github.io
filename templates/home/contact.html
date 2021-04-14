@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block title %} Innomotive | Contactme {% endblock title %}
+
+
+
+
+{% block body %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+
+<body>
+<section>
+
+    <div class="tell">
+      <p>Tell me About Yourself</p> 
+    </div>
+    <small class="small"><b>(We'll never share your information with anyone else!!)</b></small>
+
+    <form action="/contactme" method="post">
+    {% csrf_token %}
+      <div class="container">
+        <div class="lab">
+          <label class="due" for="name">Name*</label>
+          <input type="text" id="name" name="name" placeholder="your name">
+        </div>
+
+        <div class="lab">
+          <label class="due" for="email">Email*</label>
+          
+          <input type="text" id="email" name="email" placeholder="your email">
+        </div>
+
+        <div class="lab">
+          <label class="due" for="contact">Contactno.*</label>
+          <input type="text" id="contact" name="phone" placeholder="phone number">
+        </div>
+
+        <div class="lab">
+          <label class="due" for="age">Age</label>
+          <input type="number" id="age" name="age" placeholder="">
+        </div>
+
+        <div class="lab">
+          <label class="due" for="desc">Tell me more <b>or</b> Write your review <b>or</b> Write your issue</label>
+          <textarea name="more" id="desc" cols="" rows="3"></textarea>
+        </div>
+
+        <div class="lab">
+          <input class="due2" type="submit" id="sub">
+        </div>
+      </div>
+    </form>
+
+    <div class="container1">
+      <div class="box-3">
+
+
+        <div class="card-body">
+          <h5 class="card-title">Contact me</h5>
+
+          <p><b>Mail-me on my gmail :-</b> mails4burhan@gmail.com</p>
+          <p><b>Mail-me on my hotmail :-</b> burhan2002_03hotmail.com</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="contact2">
+  
+            <div class="copyright">
+                &copy; Copyright | All the rights are reserved
+            </div>
+        </div>
+</section>
+</body>
+{% endblock body %}
+
+</html>

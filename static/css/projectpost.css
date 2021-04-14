@@ -1,0 +1,114 @@
+.post{
+    margin: 2px 300px 2px 350px;
+}
+.title{
+        font-size: 50px;
+      font-family: 'Abril Fatface', cursive;
+      margin-bottom: 0px;
+}
+
+.auth{
+        font-size: 20px;
+}
+
+.cont{
+    font-size: 25px;
+}
+
+.col-1 img{
+    width: 35%;
+    margin-top: 20px;
+}
+.col-2{
+    background-color:white;
+}
+.container{
+    margin:2px 2px 10px 2px;
+}
+
+
+
+  .copyright {
+    text-align: center;
+    font-size: 16px;
+  }
+
+    .contact2{
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-size: 25px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media only screen and (min-width:1100px) and (max-width:1280px){
+    .post{
+        margin: 2px 240px 2px 300px;  
+    }
+    }
+    
+    @media only screen and (min-width:1024px) and (max-width:1100px){
+    .post{
+        margin: 2px 200px 2px 260px;  
+    }
+    }
+    
+    
+    @media only screen and (min-width:768px) and (max-width:1024px){
+    .post{
+        margin: 2px 170px 2px 220px;  
+    }
+    }
+    
+    
+    
+    @media only screen and (min-width:550px) and (max-width:768px){
+    .post{
+        margin: 2px 100px 2px 140px;  
+    }
+
+    }
+    
+    
+    
+    @media only screen and (min-width:400px) and (max-width:550px){
+    .post{
+        margin: 2px 100px 2px 100px;  
+    }
+    .title{
+        font-size: 40px;
+    }
+
+    
+    }
+    
+    
+    
+    
+    
+    @media only screen and (min-width:364px) and (max-width:550px){
+    .post{
+        margin: 2px 50px 2px 50px;  
+    }
+    .title{
+        font-size: 40px;
+    }
+
+    
+    }
+    
+    
+    
+    @media only screen and (min-width:310px) and (max-width:364px){
+    .post{
+        margin: 2px 30px 2px 30px;  
+    }
+    .title{
+        font-size: 40px;
+    }
+
+    
+    }
+    

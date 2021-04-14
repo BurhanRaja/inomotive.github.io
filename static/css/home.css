@@ -1,0 +1,535 @@
+ /* Backgorund for home */ 
+  .hero {
+
+    width: 100%;
+    height: 100%;
+    background-color: rgb(111 111 111);
+  }
+
+
+ /* style for Home on nav bar */ 
+  .activ {
+    color: darkgray;
+    font-weight: bold;
+  text-decoration: dashed; 
+  }
+
+
+
+/* My Photo and text on the intro page */ 
+  .model {
+    height: 300px;
+    position: absolute;
+    top: 180px;
+    left: 78%;
+    transform: translateX(-75%);
+    border-radius: 150px;
+  }
+
+  .text-container p:nth-child(1) {
+    font-family: calibri;
+    font-weight: bold;
+    color: white;
+    font-size: 22px;
+    position: relative;
+    margin: 70px 2px 2px 2px;
+
+  }
+
+  .text-container p:nth-child(2) {
+    font-family: calibri;
+    position: relative;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #1a1a1a;
+    margin: 2px 2px 2px 2px;
+
+  }
+
+  .text-container p:nth-child(3) {
+    font-family: myriad pro regular;
+    color: #403e3e;
+
+    line-height: 30px;
+    margin: 2px 2px 2px 2px;
+  }
+  .text-container {
+    position: absolute;
+    left: 13%;
+    top: 143px;
+    transform: translateX(-17%);
+    animation-name: hello;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes hello {
+    from {
+      left: 8%
+    }
+
+    to {
+      left: 15%;
+    }
+  }
+
+  hr {
+    border-radius: 10px;
+    width: 60px;
+    margin: 0px;
+    height: 10px;
+    background-color: darkgray;
+    margin: 14px 2px 2px 2px;
+  }
+
+
+
+
+
+
+/* Copyright at the bottom */ 
+   .copyright{
+       text-align: center;
+       font-size: 16px;
+   }
+  .contact2{
+      color: white;
+    background-color: black;
+    text-align: center;
+    font-size: 25px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+.bl > * {
+    z-index: 1;
+}
+.bl {
+    overflow: auto;
+}
+.bl::after, bl::before{
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: skew(15deg)
+               translateX(-50%);
+    width: 75%;
+    height: 100%;
+        background-image: linear-gradient(
+120deg
+,#b7b7b7,#83e2ff);
+
+    background-color: #333;
+    opacity: .7;
+} 
+
+
+/* Responsive website part given below */
+
+
+
+
+/* Size :- 1275 to 1756 */ 
+  @media only screen and (min-width: 1275px) and (max-width: 1756px) {
+    .left-col {
+      flex-basis: 30%;
+      background-color: rgb(142 142 142);
+      height: 100%;
+
+    }
+
+    .right-col {
+      flex-basis: 70%;
+      background-color: #ffffff;
+      height: 100%;
+    }
+
+    .my {
+      font-size: 60px;
+    }
+
+    .wel {
+      font-size: 30px;
+    }
+  }
+
+
+
+
+  /* Size :- 1170 to 1275 */ 
+
+  @media only screen and (min-width: 1170px) and (max-width: 1275px) {
+    .logo {
+      font-size: 20px;
+    }
+
+
+    .model {
+      height: 250px;
+      left: 85%;
+    }
+
+    .left-col {
+      flex-basis: 30%;
+      background-color: rgb(142 142 142);
+      height: 100%;
+
+    }
+
+    .right-col {
+      flex-basis: 70%;
+      background-color: #ffffff;
+      height: 100%;
+    }
+
+    .my {
+      font-size: 60px;
+    }
+
+    .wel {
+      font-size: 30px;
+    }
+
+    .social-icons a {
+      height: 33px;
+      width: 33px;
+    }
+
+  }
+
+
+
+
+
+  /* Size :- 1115 to 1170 */ 
+
+  @media only screen and (min-width: 1115px) and (max-width: 1170px) {
+    .logo {
+      font-size: 19px;
+    }
+
+    .model {
+      height: 200px;
+      left: 85%;
+    }
+
+    .my {
+      font-size: 55px;
+    }
+
+    .left-col {
+      flex-basis: 30%;
+      background-color: rgb(142 142 142);
+      height: 100%;
+
+    }
+
+    .right-col {
+      flex-basis: 70%;
+      background-color: #ffffff;
+      height: 100%;
+    }
+
+    .wel {
+      font-size: 25px;
+    }
+
+
+  }
+
+
+
+
+  /* Size :- 1024 to 1115 */ 
+
+  @media only screen and (min-width: 1024px) and (max-width: 1115px) {
+    .logo {
+      font-size: 19px;
+    }
+
+
+    .social-icons a {
+      height: 23px;
+      width: 23px;
+    }
+
+    .model {
+      height: 200px;
+      left: 85%;
+    }
+    .my {
+      font-size: 50px;
+    }
+
+    .wel {
+      font-size: 20px;
+    }
+
+
+    .left-col {
+      flex-basis: 30%;
+      background-color: rgb(142 142 142);
+      height: 100%;
+
+    }
+
+    .right-col {
+      flex-basis: 70%;
+      background-color: #ffffff;
+      height: 100%;
+    }
+
+
+  
+  }
+
+
+
+
+  /* Size:- 986 to 1024 */ 
+
+  @media only screen and (min-width: 986px) and (max-width: 1024px) {
+    .logo {
+      font-size: 18px;
+    }
+
+    #nav ul li a {
+      font-size: 10px;
+    }
+        .my {
+      font-size: 50px;
+    }
+
+    .wel {
+      font-size: 20px;
+    }
+
+    .model {
+      height: 200px;
+      left: 85%;
+    }
+
+    .left-col {
+      flex-basis: 30%;
+      background-color: rgb(142 142 142);
+      height: 100%;
+
+    }
+
+    .right-col {
+      flex-basis: 70%;
+      background-color: #ffffff;
+      height: 100%;
+    }
+ 
+  }
+
+
+
+
+
+
+   /* Size :- 870 to 986 */
+
+  @media only screen and (min-width: 870px) and (max-width: 986px) {
+    .logo {
+      font-size: 17px;
+    }
+    .my {
+      font-size: 45px;
+    }
+
+    .wel {
+      font-size: 20px;
+    }
+
+    #nav ul li a {
+      font-size: 9px;
+    }
+
+    .model {
+      height: 200px;
+      left: 85%;
+    }
+
+    .left-col {
+      flex-basis: 30%;
+      background-color: rgb(142 142 142);
+      height: 100%;
+
+    }
+
+    .right-col {
+      flex-basis: 70%;
+      background-color: #ffffff;
+      height: 100%;
+    }
+
+
+
+  }
+
+
+
+
+
+  /* Size :- 870 to 768 */ 
+  @media only screen and (min-width: 767px) and (max-width: 870px) {
+    .logo {
+      font-size: 17px;
+    }
+
+
+    .model {
+      height: 200px;
+      left: 85%;
+    }
+    .my {
+      font-size: 40px;
+    }
+
+    .wel {
+      font-size: 20px;
+    }
+
+    .left-col {
+      flex-basis: 30%;
+      background-color: rgb(142 142 142);
+      height: 100%;
+
+    }
+
+    .right-col {
+      flex-basis: 70%;
+      background-color: #ffffff;
+      height: 100%;
+    }
+
+
+  }
+
+
+
+
+
+
+  /* Size :-   425 to 768 */ 
+
+  @media only screen and (min-width: 425px) and (max-width: 767px) {
+    .left-col {
+      height: 400px;
+      width: 100%;
+      background-color: rgb(142 142 142);
+    }
+.modal-title{
+  display: none;
+}
+
+    .model {
+      height: 200px;
+      left: 59%;
+      top: 460px;
+    }
+
+.bl::after, .bl::before{
+  width:45%;
+}
+
+    .text-container {
+      left: 30%;
+      animation: none;
+
+    }
+
+    hr {
+      display: none;
+    }
+
+    .hell {
+      text-align: center;
+    }
+
+    .my {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    .wel {
+      font-size: 20px;
+      text-align: center;
+    }
+
+
+
+    .contact2 {
+      position: fixed;
+      bottom: 0px;
+    }
+
+  }
+
+
+
+
+
+
+
+
+  /* Size :- 440 to 299 */ 
+  @media only screen and (min-width: 299px) and (max-width: 440px) {
+    .left-col {
+      height: 50%;
+      width: 100%;
+      background-color: rgb(142 142 142);
+    }
+.bl::after, .bl::before{
+  width:40%;
+}
+
+    .model {
+      height: 200px;
+    left: 64%;
+    top: 400px;
+
+    }
+
+
+    .text-container {
+      left: 26%;
+      animation: none;
+  top: 11%;
+    }
+
+    hr {
+      display: none;
+    }
+
+    .hell {
+      text-align: center;
+    }
+
+    .my {
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .wel {
+      font-size: 15px;
+      text-align: center;
+    }
+
+
+
+    .contact2 {
+      position: fixed;
+      bottom: 0px;
+    }
+
+  }
+ 

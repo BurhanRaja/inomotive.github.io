@@ -1,0 +1,191 @@
+.post{
+    margin: 2px 300px 2px 350px;
+}
+.title{
+        font-size: 50px;
+      font-family: 'Abril Fatface', cursive;
+      margin-bottom: 0px;
+}
+
+.auth{
+        font-size: 20px;
+}
+
+.cont{
+    font-size: 25px;
+}
+
+.col-1 img{
+    width: 35%;
+    margin-top: 20px;
+}
+.col-2{
+    background-color:white;
+}
+.container{
+    margin:2px 2px 10px 2px;
+}
+.sec{
+    display:flex;
+    margin:25px 5px 10px 2px;
+    border:2px solid #e6e6e6;
+    border-radius:4px ;
+}
+.imagecomm{
+    margin:2px 40px 2px 12px;
+}
+.imagecomm img{
+        height: 67px;
+    width: 65px;
+}
+.commenthere{
+    margin:2px 25px 2px 2px;
+    padding:5px 18px;
+}
+.commenthere p:nth-child(1){
+margin-bottom:0px;
+}
+.sec p:nth-child(3){
+     margin-top:2px;
+}
+.cont{
+    display:block;
+}
+.commpost{
+    font-size:15px;
+    padding:9px 4px;
+}
+.sub{
+        padding: 11px 11px;
+    margin: 5px 4px 3px 6px;
+    background-color: #1b1baf;
+    border-radius: 4px;
+    color: white;
+}
+.sub:hover{
+background-color:darkblue;
+cursor:pointer;
+}
+
+  .copyright {
+    text-align: center;
+    font-size: 16px;
+  }
+
+    .contact2{
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-size: 25px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.commspan{
+    font-size:13px;
+    margin-left:5px;
+    background-color:gray;
+    border-radius:6px;
+    color:white;
+    padding:5px 8px;
+
+}
+.view{
+    background-color:white;
+    color:black;
+}
+
+
+@media only screen and (min-width:1100px) and (max-width:1280px){
+.post{
+    margin: 2px 240px 2px 300px;  
+}
+}
+
+@media only screen and (min-width:1024px) and (max-width:1100px){
+.post{
+    margin: 2px 200px 2px 260px;  
+}
+}
+
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+.post{
+    margin: 2px 170px 2px 220px;  
+}
+}
+
+
+
+@media only screen and (min-width:550px) and (max-width:768px){
+.post{
+    margin: 2px 100px 2px 140px;  
+}
+.sec{
+    display: block;
+}
+.commenthere{
+    padding-top: 0px;
+    padding-bottom:0px ;
+}
+}
+
+
+
+@media only screen and (min-width:400px) and (max-width:550px){
+.post{
+    margin: 2px 100px 2px 100px;  
+}
+.title{
+    font-size: 40px;
+}
+.sec{
+    display: block;
+}
+.commenthere{
+    padding-top: 0px;
+    padding-bottom:0px ;
+}
+
+}
+
+
+
+
+
+@media only screen and (min-width:364px) and (max-width:550px){
+.post{
+    margin: 2px 50px 2px 50px;  
+}
+.title{
+    font-size: 40px;
+}
+.sec{
+    display: block;
+}
+.commenthere{
+    padding-top: 0px;
+    padding-bottom:0px ;
+}
+
+}
+
+
+
+@media only screen and (min-width:310px) and (max-width:364px){
+.post{
+    margin: 2px 30px 2px 30px;  
+}
+.title{
+    font-size: 40px;
+}
+.sec{
+    display: block;
+}
+.commenthere{
+    padding-top: 0px;
+    padding-bottom:0px ;
+    margin-right:0px;
+}
+
+}

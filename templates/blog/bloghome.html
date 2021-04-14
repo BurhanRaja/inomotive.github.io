@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title%} Innomotive | Bloghome  {% endblock title %}
+
+
+{% block body %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/bloghome.css' %}">
+
+<body>
+
+      <!-- background image and heading -->
+      {% load static %}
+      <img class="aiimg" src="{% static 'images/blogpic.jpeg' %}" alt="..">
+      <div class="text">
+        <p>Welcome to</p>
+        <p>The World of AI and Business</p>
+      </div>
+
+       <!-- Search Bar -->
+<form action="{% url 'search' %}" method="get" class="search">
+  <input type="text" name="query" id="search" placeholder="Search..">
+  <button type="submit" class="olo">Search</button>
+  </form>
+ 
+
+ <!-- Posts Sections -->
+<div class="all">
+{% for post in allPosts %}
+      <div class="card">
+      <div class="col-1">
+      <img src="{{post.image}}" alt="...">
+      </div>
+          <div class="col-2">
+            <div class="card-body" styles={{styles}}>
+              <h1 class="card-title"> <a href="/blogs/{{post.slug}}">{{post.title}}</a> </h1>
+              <p class="card-text"><small class="text-muted">{{post.timeStamp}}</small> {% comment %} <span>({{post.views}} views)</span> {% endcomment %}</p>
+              
+              <p class="card-text"><span>{{post.content|safe|truncatechars:500}}</span></p>
+             <a href="/blogs/{{post.slug}}"  class="read">Read More</a> 
+              
+              
+            </div>
+          </div>
+           
+      </div>
+
+      {% endfor %}
+      </div>
+ 
+  <!-- Copyright section -->
+      <div class="contact2">
+
+        <div class="copyright">
+            &copy; Copyright | All the rights are reserved
+        </div>
+    </div>
+    
+</body>
+{% endblock body %}
+</html>

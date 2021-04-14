@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block title %} Innomotive | Bloghome | BlogPost {% endblock title %} 
+
+{% block body %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/blogpost.css' %}">
+
+<body>
+
+ <!-- Full Post Section -->
+<div class="post">
+<p class="title">{{post.title}}</p>
+<p>{{post.timeStamp}}</p>
+<a href="#" class="auth">{{post.author}}</a>
+{% comment %} <span class="view">({{post.views}} views)</span> {% endcomment %}
+
+      <div class="col-2">
+      <p class="cont">
+{{post.content|safe}} 
+</p>
+</div>
+
+<hr>
+
+ <!-- Comment Section -->
+<div class="container">
+<h2>Comments({{comments.count}})</h2>
+<div class="anycomment">
+{% if user.is_authenticated %}
+
+<form action="/blogs/postComment" method="post" class="com">
+{% csrf_token %}
+<div class="cont">
+<input type="text" class="commpost" name="comment" placeholder="Enter Comment Here">
+<input type="hidden" name="postsno" value="{{post.sno}}">
+<button type="submit" class="sub" name="submit">Send</button>
+</div>
+</form>
+
+{% else %}
+<p>Please Login or sign up to post Comment</p>
+{% endif %}
+
+</div>
+
+{% for comment in comments %}
+<div class="sec">
+{% load static %}
+<div class="imagecomm">
+<p><img src=" {% static 'images/user2.png' %} " alt=""></p></div>
+
+{% load humanize %}
+<div class="commenthere">
+<p><b> {{comment.user.username}} </b> <span class="commspan">{{comment.timeStamp | naturaltime}}</span></p><br>
+<p>{{comment.comment}}</p>
+</div>
+</div>
+{% endfor %}
+
+</div>
+
+</div>
+
+<br>
+ <!-- Contact Section -->
+      <div class="contact2">
+
+        <div class="copyright">
+            &copy; Copyright | All the rights are reserved
+        </div>
+    </div>
+</body>
+{% endblock body %}

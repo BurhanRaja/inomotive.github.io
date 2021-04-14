@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block title %} Innomotive | My Sketchs {% endblock title %}
+
+
+
+
+{% block body %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
+<style>
+.copy{
+    {% load static %}
+    background-image: url('{% static 'images/wall.jpg' %}');
+    }
+</style>
+
+<body>
+  <section>
+
+    <div class="dud">
+      <div class="copy"></div>
+      <div class="port">
+        <p>Welcome to my Art Portfolio</p>
+        <p>This is my art gallery. Enjoy my drawings!!</p>
+        <hr>
+        <p class="scroll">Scroll down &darr;</p>
+      </div>
+
+      <div class="bx-container">
+        <div class="bx-1">
+        {% load static %}
+          <img src="{% static 'images/mydrawing1.jpeg' %}" alt="...">
+          <!--  <div class="card-title">My drawings</div> -->
+        </div>
+        <div class="bx-2">
+        {% load static %}
+          <img src="{% static 'images/mydrawing2.jpeg' %}" alt="..">
+          <!--  <div class="card-title">My drawings</div> -->
+        </div>
+        <div class="bx-1">
+        {% load static %}
+          <img src="{% static 'images/mydrawing4.jpeg' %}" alt="...">
+          <!-- <div class="card-title">My drawings</div> -->
+        </div>
+      </div>
+
+
+
+
+      <div class="bx-container-1">
+        <div class="bx-1" id="car">
+          <img src=" mydrawing3.jpeg" alt="..">
+          <!-- <div class="card-title">My drawings</div> -->
+        </div>
+
+        <div class="bx-2">
+          <img src="mydrawing5.jpeg" alt="..">
+          <!--  <div class="card-title">My drawings</div> -->
+        </div>
+
+      </div>
+
+      <div class="bx-container-2">
+        <div class="bx-1">
+          <img src="mydrawing6.jpeg" alt="..">
+          <!--    <div class="card-title">My drawings</div> -->
+        </div>
+        <div class="bx-2">
+          <img src="mydrawing6.jpeg" alt="..">
+          <!--    <div class="card-title">My drawings</div> -->
+        </div>
+        <div class="bx-1">
+          <img src="mydrawing6.jpeg" alt="..">
+          <!--    <div class="card-title">My drawings</div> -->
+        </div>
+      </div>
+
+      <div class="contact2">
+        <div class="copyright">
+          &copy; Copyright | All the rights are reserved
+        </div>
+      </div>
+  </section>
+
+
+</body>
+{% endblock body %}
+</html>

@@ -1,0 +1,593 @@
+
+  
+  .portfolio {
+    color: darkgray;
+    font-weight: bold;
+  }
+
+  .bx-container {
+    display: flex;
+    justify-content: center;
+    margin: 31px;
+    text-align: center;
+    padding: 13px;
+    margin-top: 100px;
+  }
+
+
+  .bx-container-1,
+  .bx-container-2 {
+    display: flex;
+    justify-content: center;
+    margin: 31px;
+    text-align: center;
+    padding: 13px;
+  }
+
+
+
+
+  .bx-1,
+  .bx-2 {
+    padding: 5px 2px;
+    margin: 13px 55px 13px 16px;
+    width: 235px;
+    height: 350px;
+    background-color: rgb(255, 255, 255);
+  }
+
+
+  .card-title {
+    font-size: 35px;
+    margin: 2px;
+    font-family: 'Roboto Slab', serif;
+  }
+
+
+
+  .copyright {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .contact2 {
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-size: 25px;
+    position: relative;
+    bottom: 0;
+    width: auto;
+  }
+
+  .dud {
+    display: block;
+    background-color: black;
+    width: 90%;
+    margin-left: 66px;
+    position: static;
+    padding: 24px 14px;
+    margin-top: 47px;
+    height: 581px;
+  }
+
+  .copy {
+    height: 400px;
+    width: 46%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 41%;
+    margin-top: 44px;
+  }
+
+  .port {
+    position: absolute;
+    left: 13%;
+    top: 160px;
+    transform: translateX(-15%);
+    animation-name: hello;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    color: #ffffff;
+
+  }
+
+  @keyframes hello {
+    from {
+      left: 8%
+    }
+
+    to {
+      left: 19%;
+    }
+  }
+
+  .port p {
+    margin: 45px 15px 25px;
+    /* line-height: 0px; */
+  }
+
+  .port p:nth-child(1) {
+    font-family: calibri;
+    font-weight: bold;
+    /*   letter-spacing: 1px; */
+    color: #ffffff;
+    font-size: 60px;
+  }
+
+  .bx-cont,
+  .bx-cont-1 {
+    display: flex;
+  }
+
+  .port p:nth-child(2) {
+    font-family: myriad pro regular;
+    color: #ffffff;
+    font-size: 20px;
+    /*   line-height: 30px;
+        margin-left: 11px; */
+  }
+
+  .port p:nth-child(3) {
+    font-family: calibri;
+    font-size: 10px;
+    color: #ffffff;
+    margin: 4px;
+  }
+
+  hr {
+    border-radius: 10px;
+    width: 75px;
+    margin: 0px;
+    margin-left: 30px;
+    height: 10px;
+    background-color: darkgray;
+  }
+
+  .bx-1 img,
+  .bx-2 img {
+    height: 354px;
+    width: 235px;
+  }
+
+  #car {
+    height: 300px;
+    width: 340px;
+    border: none;
+    /*   margin: 2px 51px 4px 0px; */
+  }
+
+  #car img {
+    height: 206px;
+    width: 370px;
+  }
+
+
+
+
+ /* Size :- 1024 to 1355 */
+
+  @media only screen and (min-width: 1024px) and (max-width: 1355px) {
+    .copy {
+      left: 45%;
+    }
+
+    .port p:nth-child(1) {
+      left: 20%;
+    }
+
+    .dud {
+      width: 87%;
+    }
+
+    .bx-1,
+    .bx-2 {
+      margin: 6px 33px 9px 30px;
+    }
+  }
+
+
+
+
+ /* Size :- 768 to 1024 */ 
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .dud {
+      width: 83%;
+      height: 520px;
+      margin-left: 60px;
+    }
+
+    .bx-1,
+    .bx-2 {
+      margin: 6px 17px 9px 17px;
+    }
+
+
+    .bx-1 img,
+    .bx-2 img {
+      height: 295px;
+      width: 206px;
+    }
+
+    hr {
+      margin-left: 10px;
+    }
+
+    .port p {
+      margin: 26px 15px 25px;
+    }
+
+    .port p:nth-child(1) {
+      font-size: 40px;
+    }
+
+    .copy {
+      height: 350px;
+      width: 45%;
+    }
+  }
+
+
+
+
+/* Size :- 766 to 768*/
+  @media only screen and (min-width: 766px) and (max-width: 768px) {
+    .port {
+      top: 32%;
+    }
+
+    .port p:nth-child(2) {
+      margin: 38px 0px 38px 0px;
+    }
+
+  }
+
+
+  /* Size :- 600 to 768 */ 
+
+  @media only screen and (min-width: 600px) and (max-width:768px) {
+
+    .dud {
+      width: 80%;
+      height: 400px;
+      margin-left: 60px;
+
+    }
+
+    .port {
+      animation: none;
+      left: 33%;
+      text-align: center;
+    }
+
+    .port p {
+      display: block;
+
+    }
+
+    hr {
+      display: none;
+    }
+
+    .bx-1,
+    .bx-2 {
+      margin: 6px 17px 9px 17px;
+      height: 292px;
+    }
+
+    .bx-1 img,
+    .bx-2 img {
+
+      height: 210px;
+      width: 140px;
+
+    }
+
+    #car img {
+      height: 145px;
+      width: 258px;
+    }
+
+    .bx-container,
+    .bx-container-1,
+    .bx-container-2 {
+      margin-bottom: 0px;
+    }
+
+    .bx-container-1,
+    .bx-container-2 {
+      margin-top: 0px;
+    }
+
+    .port p:nth-child(1) {
+      font-size: 30px;
+    }
+
+    .port p:nth-child(2) {
+      font-size: 15px;
+    }
+
+    .copy {
+      height: 245px;
+      width: 40%;
+      left: 33%;
+    }
+  }
+
+
+
+
+
+
+ /* Size :- 425 to 600 */ 
+
+  @media only screen and (min-width: 525px) and (max-width:600px) {
+
+    .dud {
+      width: 80%;
+      height: 400px;
+      margin-left: 48px;
+
+    }
+
+    .port {
+      animation: none;
+      left: 33%;
+      text-align: center;
+    }
+
+    .port p {
+      display: block;
+
+    }
+
+    hr {
+      display: none;
+    }
+
+    .bx-1,
+    .bx-2 {
+      margin: 6px 10px 9px 10px;
+      height: 292px;
+    }
+
+    .bx-1 img,
+    .bx-2 img {
+
+      height: 185px;
+      width: 125px;
+
+    }
+
+    .bx-1,
+    .bx-2 {
+      height: 215px;
+    }
+
+    #car {
+      height: 215px;
+    }
+
+    #car img {
+      height: 145px;
+      width: 258px;
+    }
+
+    .bx-container,
+    .bx-container-1,
+    .bx-container-2 {
+      margin-bottom: 0px;
+    }
+
+    .bx-container-1,
+    .bx-container-2 {
+      margin-top: 0px;
+    }
+
+    .port p:nth-child(1) {
+      font-size: 27px;
+    }
+
+    .port p:nth-child(2) {
+      font-size: 13px;
+    }
+
+    .port p:nth-child(3) {
+      font-size: 13px;
+    }
+
+    .copy {
+      height: 245px;
+      width: 40%;
+      left: 33%;
+    }
+  }
+
+
+
+
+
+ /* Size :- 425 to 525 */ 
+
+  @media only screen and (min-width: 425px) and (max-width: 525px) {
+
+    .dud {
+      width: 80%;
+      height: 400px;
+      margin-left: 32px;
+
+    }
+
+    .port {
+      animation: none;
+      left: 30%;
+      text-align: center;
+    }
+
+    .port p {
+      display: block;
+
+    }
+
+    hr {
+      display: none;
+    }
+
+    .bx-1,
+    .bx-2 {
+      margin: 6px 10px 9px 10px;
+      height: 292px;
+    }
+
+    .bx-1 img,
+    .bx-2 img {
+      height: 165px;
+      width: 110px;
+    }
+
+    .bx-1,
+    .bx-2 {
+      height: 215px;
+    }
+
+    #car {
+      height: 215px;
+    }
+
+    #car img {
+      height: 125px;
+      width: 235px;
+    }
+
+    .bx-container,
+    .bx-container-1,
+    .bx-container-2 {
+      margin-bottom: 0px;
+    }
+
+    .bx-container-1,
+    .bx-container-2 {
+      margin-top: 0px;
+    }
+
+    .port p:nth-child(1) {
+      font-size: 22px;
+    }
+
+    .port p:nth-child(2) {
+      font-size: 10px;
+      margin: 38px 0px 38px 0px;
+    }
+
+    .port p:nth-child(3) {
+      font-size: 10px;
+    }
+
+    .copy {
+      height: 245px;
+      width: 40%;
+      left: 33%;
+    }
+  }
+
+
+
+
+
+
+
+ /* Size :- 320 to 425 */ 
+
+  @media only screen and (min-width: 320px) and (max-width: 425px) {
+
+    .dud {
+      width: 75%;
+      height: 327px;
+      margin-left: 35px;
+
+    }
+
+    .port {
+      animation: none;
+    left: 32%;
+    text-align: center;
+
+    }
+
+    hr {
+      display: none;
+    }
+    .port p{
+      margin: 16px 15px 25px;
+    }
+
+    .bx-1,
+    .bx-2 {
+      margin: 6px 10px 9px 10px;
+      height: 292px;
+    }
+
+    .bx-1 img,
+    .bx-2 img {
+      height: 140px;
+      width: 88px;
+    }
+
+    .bx-1,
+    .bx-2 {
+      height: 180px;
+      margin: 6px 5px 9px 5px;
+    }
+
+    #car {
+      height: 163px;
+      margin: 0px;
+    }
+
+    #car img {
+      height: 95px;
+      width: 175px;
+    }
+
+    .bx-container {
+      margin-top: 90px;
+    }
+
+    .bx-container,
+    .bx-container-1,
+    .bx-container-2 {
+      margin-bottom: 0px;
+    }
+
+    .bx-container-1,
+    .bx-container-2 {
+      margin-top: 0px;
+    }
+
+    .port p:nth-child(1) {
+      font-size: 17px;
+    }
+
+    .port p:nth-child(2) {
+      font-size: 7px;
+      margin: 31px 0px 20px 0px;
+    }
+
+    .port p:nth-child(3) {
+      font-size: 7px;
+      display: none;
+    }
+
+    .copy {
+      height: 175px;
+      width: 40%;
+      left: 33%;
+    }
+    .scroll{
+      font-size: 7px;
+    }
+  }

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title%} Innomotive | Search Results  {% endblock title %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/blogsearch.css' %}">
+{% block body %}
+
+<body>
+
+   <!-- Search not found section -->
+      <div class="text">
+        <p>Search Results:</p>
+        {% if allPosts|length < 1 %}
+        <p>No Search results found</p>
+
+       <p> Your search - <b>{{query}}</b> - did not match any document <br>
+        Suggestions:</p>
+        <ul>
+        <li>Try different keywords</li>
+        <li>Try more general keywords</li>
+        <li>Try fewer keywords</li>
+        <li></li>
+        </ul>
+       
+        
+        {% endif %}
+
+      </div>
+
+
+
+<div class="all">
+
+{% for post in allPosts %}
+      <div class="card">
+          <div class="col-2">
+            <div class="card-body">
+            <p class="author">Article by {{post.author}}</p>
+              <h2 class="card-title"> <a href="/blogs/{{post.slug}}">{{post.title}}</a></h2>
+              <p class="card-text">{{post.content|safe|truncatechars:500}}</span></p>
+              <a href="/blogs/{{post.slug}}"  class="read">Read More</a>
+              <p class="card-text"><small class="text-muted">{{post.timeStamp}}</small></p>
+              
+            </div>
+          </div>
+           </div>
+      
+      {% endfor %}
+
+ </div>
+      <div class="contact2">
+
+        <div class="copyright">
+            &copy; Copyright | All the rights are reserved
+        </div>
+    </div>
+    
+</body>
+{% endblock body %}
+</html>

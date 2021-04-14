@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %} Innomotive | Home {% endblock title %}
+
+
+
+
+{% block body %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<body >
+<section >
+<div class="bl"></div>
+   <!-- Background code -->
+    <div class="hero" id="backcolor">
+    </div>
+
+
+    <!-- Texts for the intro -->
+    <div class="text-container" id="text">
+      <p class="hell">Hello Visitor,</p>
+      <p class="my" font>Myself, Burhanuddin.Raja</p>
+      <p class="wel">Welcome to my website!!! <br /> Here,you can get to know about me,<br /> my blogs, my sketchs and
+        many
+        more</p>
+      <hr>
+    </div>
+{% load static %}
+    <!-- Image for the intro -->
+    <img src="{% static 'images/Burhan4.jpeg' %}" alt="model" id="image" class="model" >
+
+
+
+    <!-- Copyright line at bottom -->
+    <div class="contact2" id="bottom">
+      <div class="copyright">
+        &copy; Copyright | All the rights are reserved
+      </div>
+    </div>
+</section>
+</body>
+{% endblock body %}
+
+</html>

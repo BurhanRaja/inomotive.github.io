@@ -1,0 +1,476 @@
+/* Navbar */
+.Blogs{
+  color: darkgray;
+  font-weight: bold;
+}
+
+
+/* Search bar */
+.search{
+  display: flex;
+  justify-content: center;
+  top: 440px;
+  position: relative;
+  
+ }
+
+#search{
+  width: 50%;
+  height: 40px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 19px;
+  
+ }
+
+ .olo{
+  padding: 7px 12px;
+  background-color: #2d2f2c;
+  border-radius: 5px;
+  font-size: 15px;
+  border: 2px solid #073ce7;
+  color: #073ce7;
+  margin: 4px 3px 4px -3px;
+ }
+ .olo:hover{
+     background-color: rgb(184, 174, 174);
+     cursor: pointer;
+ }
+
+
+
+ /* Background Image */
+ .aiimg{
+ display: flex;
+  position: absolute;
+  height: 650px;
+  width: 100%;
+  opacity: 0.6;
+  
+ }
+
+
+
+ /* Text on Background */
+ .text{
+  position: absolute;
+  display: block;
+  left: 12%;
+  color: #404040;
+  top: 150px;
+ }
+
+ .text p:nth-child(1){
+  display: flex;
+  font-size: 100px;
+  font-weight: bold;
+  font-family: 'Baloo Da 2', cursive;
+  text-align: center;
+  margin: 3px 2px 2px 300px;
+ }
+ .text p:nth-child(2){
+   display: flex;
+   font-size:85px;
+   color:rgb(5 18 80);
+   font-family: 'Abril Fatface', cursive;
+   text-align: center;
+   margin: 2px 2px 14px 2px;
+   line-height: 100px;
+   text-decoration: underline;
+ }
+
+
+
+
+/* Post blocks */
+ .card{
+  display: flex;
+  height: auto;
+  justify-content: center;
+  border-radius: 5px;
+  width: 60%;
+  margin: 20px 0px 29px 300px;
+  margin-bottom: 34px;
+  border:2px solid #ced7ff;    
+ }
+
+.card:hover{
+box-shadow:5px 5px lightgray;
+cursor:pointer;
+}
+.card-body{
+padding-bottom:24px;
+}
+.all{
+display: block;
+position: absolute;
+top: 740px;
+
+}
+.read{
+  background-color: #1b70ff;
+padding: 4px 5px;
+border-radius: 5px;
+color: white;
+}
+.read:hover{
+background-color:#2c508e;
+}
+.col-1 img{width: 250px;
+margin-top: 33px;
+height: 180px;
+margin-left: 20px;
+}
+.content{
+display:none;
+}
+
+
+.col-2{
+padding:9px 29px;
+}
+.author{
+color: #0077f3;
+font-style: bold;
+font-weight: bolder;
+font-size: 18px;
+margin-bottom: 0px;
+}
+.card-title{
+font-family: 'Inter', sans-serif;
+margin-bottom: 0px;    
+}
+.card-title a{
+color: black;  
+}
+.card-title a:hover{
+color:blue;
+cursor:pointer;
+color:#0071ff;
+text-decoration: underline;
+}
+
+
+
+
+/*Contact Section*/ 
+.copyright {
+  text-align: center;
+  font-size: 16px;
+}
+
+  .contact2{
+  color: white;
+  background-color: black;
+  text-align: center;
+  font-size: 25px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
+/* Size:- 1280 to 1420 */
+@media only screen and (min-width:1280px) and (max-width:1420px){
+.text{
+  left:10%;
+}
+  .text p:nth-child(2){
+  font-size: 80px;
+} 
+.text p:nth-child(1){
+  font-size: 80px;
+  margin-left:270px;
+} 
+.aiimg{
+  height: 600px;
+}
+.all{
+  top:720px;
+}
+#search{
+  width:48%;
+}
+}
+
+
+
+
+
+/* Size:- 1100 to 1280 */
+@media only screen and (min-width:1100px) and (max-width:1280px){
+.text{
+  left:8%;
+}
+  .text p:nth-child(2){
+  font-size: 70px;
+} 
+.text p:nth-child(1){
+  font-size: 70px;
+  margin-left:270px;
+} 
+.aiimg{
+  height: 580px;
+}
+.all{
+  top:685px;
+}
+#search{
+  width:48%;
+}
+.search{
+  top:400px;
+}
+.card{
+  margin-left:250px;
+}
+}
+
+
+
+
+/* Size:- 1010 to 1100 */
+@media only screen and (min-width:1010px) and (max-width:1100px){
+.text{
+  left:14%;
+}
+  .text p:nth-child(2){
+  font-size: 55px;
+} 
+.text p:nth-child(1){
+  font-size: 50px;
+  margin-left:250px;
+} 
+.aiimg{
+  height: 495px;
+}
+.all{
+  top:607px;
+}
+#search{
+  width:48%;
+}
+.search{
+  top:300px;
+}
+.card{
+  margin-left:190px;
+  width: 61%;
+}
+.read{
+  display: none;
+}
+}
+
+
+
+/* Size:- 768 to 1010 */
+@media only screen and (min-width:768px) and (max-width:1010px){
+.text{
+  left:12%;
+}
+  .text p:nth-child(2){
+  font-size: 45px;
+} 
+.text p:nth-child(1){
+  font-size: 40px;
+  margin-left:190px;
+} 
+.aiimg{
+  height: 495px;
+}
+.all{
+  top:607px;
+}
+#search{
+  width:48%;
+}
+.search{
+  top:300px;
+}
+.card{
+  margin-left: 128px;
+  width: 70%;
+  /* display: block; */
+}
+
+.col-1 {
+  margin-left: 0px;
+}
+.read{
+  display: none;
+}
+}
+
+
+
+
+
+/* Size:- 500 to 767 */
+@media only screen and (min-width:500px) and (max-width:767px){
+.text{
+  left: 10%;
+  margin-top: 110px;
+}
+  .text p:nth-child(2){
+  font-size: 40px;
+  line-height: normal;
+} 
+.text p:nth-child(1){
+  font-size: 35px;
+  margin-bottom: 20px;
+  margin-left:150px;
+} 
+.aiimg{
+  height: 450px;
+}
+.all{
+  top:700px;
+}
+#search{
+  width:48%;
+  height: 30px;
+}
+.olo{
+  padding: 0px 7px;
+}
+.search{
+  top:300px;
+}
+.card{
+  margin-left: 90px;
+  width: 70%;
+  /* display: block; */
+}
+.card-body{
+  font-size: 20px;
+}
+.col-1 {
+  margin-left: 0px;
+}
+.col-1 img{
+display: none;
+}
+.read{
+  display: none;
+}
+}
+
+
+
+
+/* Size:- 400 to 499 */
+@media only screen and (min-width:400px) and (max-width:499px){
+.text{
+  left: 6%;
+  margin-top: 110px;
+}
+  .text p:nth-child(2){
+  font-size: 35px;
+  line-height: normal;
+} 
+.text p:nth-child(1){
+  font-size: 35px;
+  margin-bottom: 20px;
+  margin-left:99px;
+} 
+.aiimg{
+  height: 420px;
+}
+.all{
+  top:650px;
+}
+#search{
+  width:48%;
+  height: 30px;
+}
+.olo{
+  padding: 0px 7px;
+}
+.search{
+  top:300px;
+}
+.card{
+  margin-left: 60px;
+  width: 70%;
+  /* display: block; */
+}
+.card-body{
+  font-size: 20px;
+}
+.col-1 {
+  margin-left: 0px;
+}
+.col-1 img{
+display: none;
+}
+.read{
+  display: none;
+}
+}
+
+
+
+/* Size:- 300 to 399 */
+@media only screen and (min-width:300px) and (max-width:399px){
+.text{
+  left: 4%;
+  margin-top: 110px;
+}
+  .text p:nth-child(2){
+  font-size: 30px;
+  line-height: normal;
+} 
+.text p:nth-child(1){
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-left:70px;
+}
+.col-2 {
+  padding: 9px 17px;
+} 
+.aiimg{
+  height: 420px;
+}
+.all{
+  top:650px;
+}
+#search{
+  width:48%;
+  height: 18px;
+  font-size: 12px;
+}
+.olo{
+  padding: 0px 2px;
+  height: 32px;
+  font-size: 10px;
+}
+.search{
+  top:300px;
+}
+.card{
+  margin-left: 50px;
+  width: 70%;
+  /* display: block; */
+}
+.card-body{
+  font-size: 20px;
+}
+.col-1 {
+  margin-left: 0px;
+}
+.col-1 img{
+display: none;
+}
+.read{
+  display: none;
+}
+.card-text{
+font-size:20px;
+}
+}
+
+
+
+
+
